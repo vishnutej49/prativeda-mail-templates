@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Support Ticket Update</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #f9f9f9; color: #111111; }
+        .wrap { max-width: 600px; margin: 0 auto; background: #ffffff; border-left: 4px solid #000000; padding: 40px; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .meta { font-size: 12px; text-transform: uppercase; color: #888888; letter-spacing: 1px; margin-bottom: 10px; font-weight: 600; }
+        .subject { font-size: 20px; font-weight: 700; margin: 0 0 20px 0; padding-bottom: 20px; border-bottom: 1px solid #eeeeee; }
+        .response-box { line-height: 1.6; font-size: 15px; }
+        .ref { font-family: 'Courier New', monospace; background: #eeeeee; padding: 5px 10px; font-size: 12px; display: inline-block; margin-top: 30px; }
+        
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #eeeeee !important; }
+            .wrap { background-color: #111111 !important; border-left-color: #ffffff !important; box-shadow: none !important; }
+            .meta { color: #aaaaaa !important; }
+            .subject { border-bottom-color: #333333 !important; }
+            .ref { background: #333333 !important; color: #ffffff !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="meta">Ticket #{{ticket_id}} &bull; Status: {{ticket_status}}</div>
+        <h2 class="subject">{{ticket_subject}}</h2>
+        
+        <div class="response-box">
+            <p>Dear {{name}},</p>
+            
+            <p>{{agent_response_body}}</p>
+            
+            <br>
+            <p style="margin-bottom: 0;">Regards,</p>
+            <p style="font-weight: 700; margin-top: 5px;">{{agent_name}}</p>
+            <p style="font-size: 13px; color: #666;">Prativeda Customer Success</p>
+        </div>
+        
+        <div class="ref">REF_ID: {{ticket_id}}</div>
+        <p style="font-size: 12px; color: #888; margin-top: 20px;">To add more details, simply reply to this email.</p>
+    </div>
+</body>
+</html>
+

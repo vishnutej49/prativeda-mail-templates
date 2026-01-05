@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Security Alert</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #f8f8f8; color: #000000; }
+        .main { max-width: 500px; margin: 40px auto; background: #ffffff; border: 2px solid #000000; }
+        .banner { background: #000000; color: #ffffff; padding: 15px; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .content { padding: 30px; }
+        .warning-text { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .data-table td { padding: 10px 0; border-bottom: 1px solid #eeeeee; }
+        .data-table td:first-child { font-weight: 700; width: 40%; color: #555; }
+        .btn { display: block; width: 100%; text-align: center; border: 2px solid #000000; padding: 15px 0; text-decoration: none; color: #000000; font-weight: 700; text-transform: uppercase; margin-top: 20px; }
+        .btn:hover { background-color: #000000; color: #ffffff; }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #ffffff !important; }
+            .main { background: #111111 !important; border-color: #ffffff !important; }
+            .banner { background: #ffffff !important; color: #000000 !important; }
+            .data-table td { border-bottom-color: #333333 !important; }
+            .data-table td:first-child { color: #aaaaaa !important; }
+            .btn { border-color: #ffffff !important; color: #ffffff !important; }
+            .btn:hover { background-color: #ffffff !important; color: #000000 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="banner">
+            Security Alert
+        </div>
+        <div class="content">
+            <div class="warning-text">New Login Detected</div>
+            <p>We noticed a new sign-in to your Prativeda account. If this was you, you can ignore this email.</p>
+            
+            <table class="data-table">
+                <tr>
+                    <td>Device</td>
+                    <td>{{device_name}}</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>{{location}}</td>
+                </tr>
+                <tr>
+                    <td>IP Address</td>
+                    <td>{{ip_address}}</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>{{timestamp}}</td>
+                </tr>
+            </table>
+            
+            <p style="margin-top: 30px; font-size: 14px;">Not you? Secure your account immediately.</p>
+            
+            <a href="{{secure_account_url}}" class="btn">Secure Account</a>
+        </div>
+    </div>
+</body>
+</html>
+

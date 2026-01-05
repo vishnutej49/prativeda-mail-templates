@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Receipt</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #ffffff; color: #000000; }
+        .invoice-box { max-width: 600px; margin: auto; padding: 30px; border: 1px solid #000000; font-size: 15px; line-height: 24px; }
+        .invoice-box table { width: 100%; line-height: inherit; text-align: left; border-collapse: collapse; }
+        .invoice-box table td { padding: 10px; vertical-align: top; }
+        .invoice-box table tr.top table td { padding-bottom: 20px; }
+        .invoice-box table tr.heading td { background: #000000; color: #ffffff; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        .invoice-box table tr.details td { border-bottom: 1px solid #eeeeee; }
+        .invoice-box table tr.item td { border-bottom: 1px solid #eeeeee; }
+        .invoice-box table tr.total td:nth-child(2) { border-top: 2px solid #000000; font-weight: 700; font-size: 18px; }
+        
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #ffffff !important; }
+            .invoice-box { border-color: #ffffff !important; }
+            .invoice-box table tr.heading td { background: #ffffff !important; color: #000000 !important; }
+            .invoice-box table tr.details td { border-bottom-color: #333333 !important; }
+            .invoice-box table tr.item td { border-bottom-color: #333333 !important; }
+            .invoice-box table tr.total td:nth-child(2) { border-top-color: #ffffff !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <strong>PRATIVEDA</strong><br>
+                                Receipt #{{invoice_number}}<br>
+                                Date: {{date}}
+                            </td>
+                            <td style="text-align: right;">
+                                Billed To:<br>
+                                {{name}}<br>
+                                {{user_email}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="heading">
+                <td>Description</td>
+                <td style="text-align: right;">Price</td>
+            </tr>
+
+            <tr class="item">
+                <td>{{product_description}}</td>
+                <td style="text-align: right;">{{currency_symbol}}{{amount}}</td>
+            </tr>
+            
+            <tr class="item">
+                <td style="font-size: 12px;">Tax / Fees</td>
+                <td style="text-align: right; font-size: 12px;">{{currency_symbol}}0.00</td>
+            </tr>
+
+            <tr class="total">
+                <td></td>
+                <td style="text-align: right;">
+                    Total: {{currency_symbol}}{{amount}}
+                </td>
+            </tr>
+        </table>
+        
+        <div style="margin-top: 40px; font-size: 12px; text-align: center; opacity: 0.7;">
+            <p>CodeTapasya Services • GSTIN: {{gstin_number}}<br>
+            Need help? Contact billing-prativeda@codetapasya.com</p>
+        </div>
+    </div>
+</body>
+</html>
+

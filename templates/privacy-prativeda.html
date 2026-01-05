@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Privacy Notification</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #fcfcfc; color: #000000; }
+        .main { max-width: 600px; margin: 40px auto; border-top: 5px solid #000000; padding: 40px 20px; background: #ffffff; }
+        .header { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-bottom: 1px solid #eeeeee; padding-bottom: 15px; }
+        .title { font-size: 24px; font-weight: 700; margin-bottom: 20px; }
+        .content { font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+        
+        /* Data Export Box */
+        .data-box { border: 2px dashed #000000; padding: 25px; margin: 20px 0; text-align: center; background-color: #fafafa; }
+        .download-btn { display: inline-block; background-color: #000000; color: #ffffff !important; text-decoration: none; padding: 12px 30px; font-weight: 600; margin-top: 15px; text-transform: uppercase; font-size: 14px; }
+        
+        .footer { font-size: 11px; color: #777777; border-top: 1px solid #eeeeee; padding-top: 20px; margin-top: 40px; }
+        .footer a { color: #000000; text-decoration: underline; }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #dddddd !important; }
+            .main { background: #111111 !important; border-top-color: #ffffff !important; }
+            .header { border-bottom-color: #333333 !important; color: #aaaaaa !important; }
+            .data-box { border-color: #ffffff !important; background-color: #1a1a1a !important; color: #ffffff !important; }
+            .download-btn { background-color: #ffffff !important; color: #000000 !important; }
+            .footer { border-top-color: #333333 !important; color: #888888 !important; }
+            .footer a { color: #ffffff !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            Prativeda Privacy Office
+        </div>
+        
+        <div class="title">{{request_type_title}}</div>
+        
+        <div class="content">
+            <p>Dear {{name}},</p>
+            
+            <p>We are contacting you regarding your request regarding {{request_subject}} (Case ID: {{case_id}}).</p>
+            
+            <p>{{body_text}}</p>
+            
+            <!-- Conditional: Show only for Data Export requests -->
+            {% if is_data_export %}
+            <div class="data-box">
+                <strong>Your Data Archive is Ready</strong>
+                <br>
+                <span style="font-size: 12px; opacity: 0.8;">Expires in 48 hours</span>
+                <br>
+                <a href="{{download_url}}" class="download-btn">Download Archive</a>
+            </div>
+            {% endif %}
+            
+            <p>If you have further questions about how we handle your data, please review our updated policies or contact our Data Protection Officer.</p>
+        </div>
+        
+        <div class="footer">
+            <p>CodeTapasya Data Compliance • Hyderabad, India</p>
+            <p><a href="{{privacy_policy_url}}">Privacy Policy</a> &bull; <a href="{{help_url}}">Contact DPO</a></p>
+            <p style="margin-top: 10px; opacity: 0.6;">Confidential: This email is intended solely for the addressee.</p>
+        </div>
+    </div>
+</body>
+</html>
+

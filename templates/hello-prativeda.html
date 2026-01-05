@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Update</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #ffffff; color: #000000; }
+        .outer { max-width: 640px; margin: 0 auto; padding: 40px 20px; }
+        .logo-header { text-align: center; border-bottom: 1px solid #000000; padding-bottom: 30px; margin-bottom: 40px; }
+        .brand { font-weight: 900; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #000000; }
+        .headline { font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+        .text { font-size: 16px; line-height: 1.6; color: #333333; margin-bottom: 20px; }
+        .cta-link { display: inline-block; border-bottom: 2px solid #000000; padding-bottom: 2px; color: #000000; text-decoration: none; font-weight: 700; font-size: 16px; margin-top: 10px; }
+        .footer { margin-top: 60px; text-align: center; font-size: 11px; color: #888888; }
+        .footer a { color: #555555; text-decoration: none; }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #eeeeee !important; }
+            .logo-header { border-bottom-color: #ffffff !important; }
+            .brand { color: #ffffff !important; }
+            .text { color: #cccccc !important; }
+            .cta-link { border-bottom-color: #ffffff !important; color: #ffffff !important; }
+            .footer { color: #666666 !important; }
+            .footer a { color: #888888 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="logo-header">
+            <span class="brand">PRATIVEDA</span>
+        </div>
+        
+        <div class="headline">{{headline}}</div>
+        
+        <div class="text">
+            <p>Hi {{name}},</p>
+            
+            <p>{{body_paragraph_1}}</p>
+            
+            <p>{{body_paragraph_2}}</p>
+            
+            <a href="{{cta_url}}" class="cta-link">{{cta_text}} &rarr;</a>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; {{current_year}} Prativeda. All rights reserved.</p>
+            <p><a href="{{unsubscribe_url}}">Unsubscribe</a> &bull; <a href="{{browser_url}}">View Online</a></p>
+        </div>
+    </div>
+</body>
+</html>
