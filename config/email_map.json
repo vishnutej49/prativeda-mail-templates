@@ -1,0 +1,34 @@
+{
+  "noreply": { 
+    "from": "noreply-prativeda@codetapasya.com", 
+    "template": "NoreplyTemplate" 
+  },
+  "welcome": { 
+    "from": "welcome-prativeda@codetapasya.com", 
+    "template": "WelcomeTemplate" 
+  },
+  "hello": { 
+    "from": "hello-prativeda@codetapasya.com", 
+    "template": "HelloTemplate" 
+  },
+  "support": { 
+    "from": "support-prativeda@codetapasya.com", 
+    "template": "SupportTemplate" 
+  },
+  "legal": { 
+    "from": "legal-prativeda@codetapasya.com", 
+    "template": "LegalTemplate" 
+  },
+  "privacy": { 
+    "from": "privacy-prativeda@codetapasya.com", 
+    "template": "PrivacyTemplate" 
+  },
+  "security": { 
+    "from": "security-prativeda@codetapasya.com", 
+    "template": "SecurityTemplate" 
+  },
+  "billing": { 
+    "from": "billing-prativeda@codetapasya.com", 
+    "template": "BillingTemplate" 
+  }
+}
