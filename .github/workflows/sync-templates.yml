@@ -1,4 +1,4 @@
-name: Sync Templates to S3
+name: Sync Templates & Config to S3
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'templates/**'
+      - 'config/**'
 
 jobs:
   deploy:
@@ -23,5 +24,8 @@ jobs:
 
       - name: Sync Config & Templates to S3
         run: |
+          # Sync Templates
           aws s3 sync ./templates s3://${{ secrets.AWS_S3_BUCKET }}/templates --delete
+          
+          # Sync Config (Only works if config folder exists in repo)
           aws s3 sync ./config s3://${{ secrets.AWS_S3_BUCKET }}/config --delete
