@@ -26,5 +26,9 @@
   "security": { 
     "from": "security-prativeda@codetapasya.com", 
     "template": "SecurityTemplate" 
+  },
+  "billing":{
+    "from": "billing-prativeda@codetapasya.com",
+    "template": "BillingTemplate"
   }
 }
