@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>System Notification</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        
+        :root { color-scheme: light dark; }
+        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
+        
+        /* Light Mode */
+        body { background-color: #ffffff; color: #000000; }
+        .container { max-width: 600px; margin: 40px auto; border: 1px solid #000000; padding: 40px; }
+        .header { border-bottom: 1px solid #000000; padding-bottom: 20px; margin-bottom: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .code-block { background-color: #f4f4f4; border: 1px solid #000000; padding: 20px; text-align: center; font-size: 32px; font-weight: 700; letter-spacing: 8px; margin: 30px 0; font-variant-numeric: tabular-nums; }
+        .btn { display: inline-block; background-color: #000000; color: #ffffff; padding: 15px 30px; text-decoration: none; font-weight: 600; margin-top: 20px; text-transform: uppercase; font-size: 14px; }
+        .footer { margin-top: 40px; font-size: 11px; color: #666666; border-top: 1px solid #eeeeee; padding-top: 20px; }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000000 !important; color: #cccccc !important; }
+            .container { border-color: #ffffff !important; }
+            .header { border-bottom-color: #ffffff !important; color: #ffffff !important; }
+            .code-block { background-color: #1a1a1a !important; border-color: #ffffff !important; color: #ffffff !important; }
+            .btn { background-color: #ffffff !important; color: #000000 !important; }
+            .footer { border-top-color: #333333 !important; color: #888888 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            System Notification // {{notification_type}}
+        </div>
+        
+        <p>Hello {{name}},</p>
+        
+        <p>{{body_text}}</p>
+        
+        <!-- Verification Code Block -->
+        {% if verification_code %}
+        <div class="code-block">
+            {{verification_code}}
+        </div>
+        <p style="font-size: 12px; text-align: center;">This code will expire in 10 minutes.</p>
+        {% endif %}
+
+        <!-- Action Button Block -->
+        {% if action_url %}
+        <div style="text-align: center;">
+            <a href="{{action_url}}" class="btn">{{action_text}}</a>
+        </div>
+        {% endif %}
+        
+        <div class="footer">
+            <p><strong>SECURITY NOTICE:</strong> If you did not request this action, please ignore this email. No changes have been made to your account.</p>
+            <p>Sent by Prativeda System • Do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>
+
