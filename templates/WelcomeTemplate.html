@@ -11,6 +11,7 @@
         
         :root {
             color-scheme: light dark;
+            supported-color-schemes: light dark;
         }
         body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
         
@@ -21,6 +22,7 @@
         .header { padding: 40px 40px 20px 40px; border-bottom: 2px solid #000000; text-align: left; }
         .logo { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; color: #000000; text-decoration: none; text-transform: uppercase; }
         .content { padding: 40px; line-height: 1.6; font-size: 15px; }
+        .ai-message { font-style: italic; color: #444444; background-color: #f9f9f9; border-left: 4px solid #000000; padding: 15px 20px; margin: 25px 0; line-height: 1.7; }
         .button { background-color: #000000; color: #ffffff !important; text-decoration: none; padding: 14px 28px; border-radius: 0px; font-weight: 600; display: inline-block; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; border: 2px solid #000000; }
         .footer { padding: 30px 40px; background-color: #fafafa; font-size: 12px; color: #666666; text-align: center; border-top: 1px solid #eeeeee; }
         .footer a { color: #000000; text-decoration: underline; }
@@ -33,6 +35,7 @@
             .header { border-bottom-color: #ffffff !important; }
             .logo { color: #ffffff !important; }
             .content { color: #dddddd !important; }
+            .ai-message { background-color: #1a1a1a !important; color: #cccccc !important; border-left-color: #ffffff !important; }
             h1, h2, h3 { color: #ffffff !important; }
             .button { background-color: #ffffff !important; color: #000000 !important; border-color: #ffffff !important; }
             .footer { background-color: #111111 !important; border-top-color: #333333 !important; color: #999999 !important; }
@@ -58,6 +61,11 @@
                     
                     <p>Thank you for joining Prativeda. You have successfully created your account and taken the first step towards a data-driven career strategy.</p>
                     
+                    <!-- AI Personalized Message -->
+                    <div class="ai-message">
+                        {{ai_message}}
+                    </div>
+                    
                     <p>Our platform is designed to bridge the gap between your skills and industry requirements. Your account grants you immediate access to our core suite of tools:</p>
                     
                     <ul style="padding-left: 20px; margin-bottom: 30px;">
@@ -69,10 +77,6 @@
                     <div style="padding: 20px 0;">
                         <a href="{{dashboard_url}}" class="button">Access Your Dashboard</a>
                     </div>
-                    
-                    <div class="divider"></div>
-                    
-                    <p style="font-size: 14px; margin-bottom: 0;">If you have any questions or require assistance during your onboarding, simply reply to this email.</p>(here keep the support mail)
                 </td>
             </tr>
             
@@ -81,11 +85,10 @@
                 <td class="footer">
                     <p>&copy; {{current_year}} Prativeda. Operated by CodeTapasya.</p>
                     <p>Hyderabad, India</p>
-                    <p><a href="{{unsubscribe_url}}">Unsubscribe</a> &nbsp;|&nbsp; <a href="{{privacy_url}}">Privacy Policy</a> &nbsp;|&nbsp; <a href="{{help_url}}">Support</a></p>
+                    <p><a href="{{unsubscribe_url}}">Manage Preferences</a> &nbsp;|&nbsp; <a href="{{privacy_url}}">Privacy Policy</a> &nbsp;|&nbsp; <a href="{{help_url}}">Support</a></p>
                 </td>
             </tr>
         </table>
     </center>
 </body>
 </html>
-
