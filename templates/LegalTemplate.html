@@ -1,64 +1,102 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>Legal Notice</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        
-        :root { color-scheme: light dark; }
-        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
-        
-        /* Light Mode */
-        body { background-color: #ffffff; color: #000000; }
-        .container { max-width: 600px; margin: 0 auto; padding: 50px 20px; }
-        .header { font-weight: 700; border-bottom: 4px solid #000000; padding-bottom: 10px; margin-bottom: 30px; font-size: 24px; }
-        .content { font-size: 16px; line-height: 1.6; text-align: justify; }
-        .highlight-box { border: 1px solid #000000; padding: 20px; margin: 30px 0; font-size: 14px; background-color: #fcfcfc; }
-        .btn-text { font-weight: 700; text-decoration: underline; color: #000000; }
-        .footer { margin-top: 50px; font-size: 10px; color: #666666; border-top: 1px solid #cccccc; padding-top: 10px; }
+  <meta charset="utf-8">
+  </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
+  <meta name="color-scheme" content="light dark">
+  </meta>
+  <title>Legal Notice</title>
 
-        /* Dark Mode */
-        @media (prefers-color-scheme: dark) {
-            body { background-color: #000000 !important; color: #dddddd !important; }
-            .header { border-bottom-color: #ffffff !important; }
-            .highlight-box { border-color: #ffffff !important; background-color: #111111 !important; color: #ffffff !important; }
-            .btn-text { color: #ffffff !important; }
-            .footer { border-top-color: #333333 !important; color: #888888 !important; }
-        }
-    </style>
+
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #000000 !important;
+        color: #dddddd !important;
+      }
+
+      .dark\:border-\[\#333333\] {
+        border-color: #333333 !important;
+      }
+
+      .dark\:border-white {
+        border-color: #ffffff !important;
+      }
+
+      .dark\:bg-\[\#111111\] {
+        background-color: #111111 !important;
+      }
+
+      .dark\:bg-black {
+        background-color: #000000 !important;
+      }
+
+      .dark\:text-\[\#888888\] {
+        color: #888888 !important;
+      }
+
+      .dark\:text-\[\#dddddd\] {
+        color: #dddddd !important;
+      }
+
+      .dark\:text-white {
+        color: #ffffff !important;
+      }
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            Legal Update
-        </div>
-        
-        <div class="content">
-            <p><strong>To:</strong> {{name}}</p>
-            <p><strong>Re:</strong> Updates to {{document_name}}</p>
-            
-            <p>This correspondence serves as formal notification regarding amendments to the Prativeda {{document_name}}, effective {{effective_date}}.</p>
-            
-            <p>We have updated our policies to ensure continued compliance with evolving regulatory standards and to improve transparency regarding our service operations.</p>
-            
-            <div class="highlight-box">
-                <strong>Summary of Changes:</strong><br><br>
-                {{summary_of_changes}}
-            </div>
-            
-            <p>Continued access to or use of the Service constitutes acceptance of these modified terms. We encourage you to review the full document here:</p>
-            
-            <p><a href="{{document_url}}" class="btn-text">Read Full {{document_name}}</a></p>
-        </div>
-        
-        <div class="footer">
-            MANDATORY SERVICE ANNOUNCEMENT<br>
-            You cannot unsubscribe from legal notices as they contain essential information about your contractual relationship with CodeTapasya.
-        </div>
-    </div>
-</body>
-</html>
 
+<body class="m-0 p-0 font-sans antialiased bg-white text-black dark:bg-black dark:text-[#dddddd]"
+  style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+  <div class="max-w-[600px] mx-auto py-12 px-5"
+    style="margin-left: auto; margin-right: auto; max-width: 600px; padding-left: 1.25rem; padding-right: 1.25rem; padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="font-bold border-b-4 border-black pb-2.5 mb-8 text-2xl dark:border-white"
+      style="margin-bottom: 2rem; border-bottom-width: 4px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); padding-bottom: 0.625rem; font-size: 1.5rem; line-height: 2rem; font-weight: 700;">
+      Legal Update
+    </div>
+
+    <div class="text-base leading-loose text-justify" style="text-align: justify; font-size: 1rem; line-height: 2;">
+      <p class="mb-4" style="margin-bottom: 1rem;"><strong>To:</strong> {{name}}</p>
+      <p class="mb-4" style="margin-bottom: 1rem;"><strong>Re:</strong> Updates to {{document_name}}</p>
+
+      <p class="mb-4" style="margin-bottom: 1rem;">This correspondence serves as formal notification regarding
+        amendments to the Prativeda
+        {{document_name}}, effective {{effective_date}}.</p>
+
+      <p class="mb-4" style="margin-bottom: 1rem;">We have updated our policies to ensure continued compliance with
+        evolving regulatory
+        standards and to improve transparency regarding our service operations.</p>
+
+      <div
+        class="border border-black p-5 my-8 text-sm bg-[#fcfcfc] dark:border-white dark:bg-[#111111] dark:text-white whitespace-pre-wrap"
+        style="margin-top: 2rem; margin-bottom: 2rem; white-space: pre-wrap; border-width: 1px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(252 252 252 / var(--tw-bg-opacity, 1)); padding: 1.25rem; font-size: 0.875rem; line-height: 1.25rem;">
+        <strong>Summary of Changes:</strong><br></br><br></br>
+        {{summary_of_changes}}
+      </div>
+
+      <p class="mb-4" style="margin-bottom: 1rem;">Continued access to or use of the Service constitutes acceptance of
+        these modified terms. We
+        encourage you to review the full document here:</p>
+
+      <p class="mb-4" style="margin-bottom: 1rem;"><a href="{{document_url}}"
+          class="font-bold underline text-black dark:text-white hover:opacity-80"
+          style="font-weight: 700; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Read
+          Full
+          {{document_name}}</a></p>
+    </div>
+
+    <div
+      class="mt-12 text-[10px] text-[#666666] border-t border-[#cccccc] pt-2.5 dark:border-[#333333] dark:text-[#888888]"
+      style="margin-top: 3rem; border-top-width: 1px; --tw-border-opacity: 1; border-color: rgb(204 204 204 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; font-size: 10px; --tw-text-opacity: 1; color: rgb(102 102 102 / var(--tw-text-opacity, 1));">
+      MANDATORY SERVICE ANNOUNCEMENT<br></br>
+      You cannot unsubscribe from legal notices as they contain essential information about your contractual
+      relationship with CodeTapasya.
+    </div>
+  </div>
+</body>
+
+</html>

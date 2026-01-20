@@ -1,94 +1,155 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
+    </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
     <meta name="color-scheme" content="light dark">
+    </meta>
     <meta name="supported-color-schemes" content="light dark">
+    </meta>
     <title>Welcome to Prativeda</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        
-        :root {
-            color-scheme: light dark;
-            supported-color-schemes: light dark;
-        }
-        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-        
-        /* Light Mode Defaults */
-        body { background-color: #f4f4f4; color: #000000; }
-        .wrapper { width: 100%; table-layout: fixed; background-color: #f4f4f4; padding-bottom: 40px; }
-        .main { background-color: #ffffff; margin: 0 auto; width: 100%; max-width: 600px; border-spacing: 0; border: 1px solid #dddddd; }
-        .header { padding: 40px 40px 20px 40px; border-bottom: 2px solid #000000; text-align: left; }
-        .logo { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; color: #000000; text-decoration: none; text-transform: uppercase; }
-        .content { padding: 40px; line-height: 1.6; font-size: 15px; }
-        .ai-message { font-style: italic; color: #444444; background-color: #f9f9f9; border-left: 4px solid #000000; padding: 15px 20px; margin: 25px 0; line-height: 1.7; }
-        .button { background-color: #000000; color: #ffffff !important; text-decoration: none; padding: 14px 28px; border-radius: 0px; font-weight: 600; display: inline-block; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; border: 2px solid #000000; }
-        .footer { padding: 30px 40px; background-color: #fafafa; font-size: 12px; color: #666666; text-align: center; border-top: 1px solid #eeeeee; }
-        .footer a { color: #000000; text-decoration: underline; }
-        .divider { border-top: 1px solid #eeeeee; margin: 30px 0; }
 
-        /* Dark Mode Overrides */
+
+
+    <style>
         @media (prefers-color-scheme: dark) {
-            body, .wrapper { background-color: #000000 !important; color: #ffffff !important; }
-            .main { background-color: #111111 !important; border-color: #333333 !important; }
-            .header { border-bottom-color: #ffffff !important; }
-            .logo { color: #ffffff !important; }
-            .content { color: #dddddd !important; }
-            .ai-message { background-color: #1a1a1a !important; color: #cccccc !important; border-left-color: #ffffff !important; }
-            h1, h2, h3 { color: #ffffff !important; }
-            .button { background-color: #ffffff !important; color: #000000 !important; border-color: #ffffff !important; }
-            .footer { background-color: #111111 !important; border-top-color: #333333 !important; color: #999999 !important; }
-            .footer a { color: #ffffff !important; }
-            .divider { border-top-color: #333333 !important; }
+            body {
+                background-color: #000000 !important;
+                color: #ffffff !important;
+            }
+
+            .dark\:border-\[\#333333\] {
+                border-color: #333333 !important;
+            }
+
+            .dark\:border-white {
+                border-color: #ffffff !important;
+            }
+
+            .dark\:bg-\[\#111111\] {
+                background-color: #111111 !important;
+            }
+
+            .dark\:bg-\[\#1a1a1a\] {
+                background-color: #1a1a1a !important;
+            }
+
+            .dark\:bg-black {
+                background-color: #000000 !important;
+            }
+
+            .dark\:bg-white {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .dark\:text-\[\#999999\] {
+                color: #999999 !important;
+            }
+
+            .dark\:text-\[\#cccccc\] {
+                color: #cccccc !important;
+            }
+
+            .dark\:text-\[\#dddddd\] {
+                color: #dddddd !important;
+            }
+
+            .dark\:text-black {
+                color: #000000 !important;
+            }
+
+            .dark\:text-white {
+                color: #ffffff !important;
+            }
         }
     </style>
 </head>
-<body>
-    <center class="wrapper">
-        <table class="main" width="100%">
+
+<body class="m-0 p-0 font-sans antialiased bg-[#f4f4f4] text-black dark:bg-black dark:text-white"
+    style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(244 244 244 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+    <center class="w-full bg-[#f4f4f4] pb-10 table-fixed dark:bg-black"
+        style="width: 100%; table-layout: fixed; --tw-bg-opacity: 1; background-color: rgb(244 244 244 / var(--tw-bg-opacity, 1)); padding-bottom: 2.5rem;">
+        <table
+            class="bg-white mx-auto w-full max-w-[600px] border-spacing-0 border border-[#dddddd] dark:bg-[#111111] dark:border-[#333333]"
+            width="100%"
+            style="margin-left: auto; margin-right: auto; width: 100%; max-width: 600px; --tw-border-spacing-x: 0px; --tw-border-spacing-y: 0px; border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y); border-width: 1px; --tw-border-opacity: 1; border-color: rgb(221 221 221 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));"
+            bgcolor="rgb(255 255 255 / var(--tw-bg-opacity, 1))">
             <!-- Header -->
             <tr>
-                <td class="header">
-                    <span class="logo">PRATIVEDA</span>
+                <td class="p-10 pb-5 border-b-2 border-black text-left dark:border-white"
+                    style="border-bottom-width: 2px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); padding: 2.5rem; padding-bottom: 1.25rem; text-align: left;"
+                    align="left">
+                    <span class="text-2xl font-bold tracking-tight text-black no-underline uppercase dark:text-white"
+                        style="font-size: 1.5rem; line-height: 2rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.025em; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: none;">PRATIVEDA</span>
                 </td>
             </tr>
-            
+
             <!-- Body -->
             <tr>
-                <td class="content">
-                    <h1 style="margin-top:0; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">Welcome Aboard, {{name}}.</h1>
-                    
-                    <p>Thank you for joining Prativeda. You have successfully created your account and taken the first step towards a data-driven career strategy.</p>
-                    
+                <td class="p-10 leading-relaxed text-[15px] dark:text-[#dddddd]"
+                    style="padding: 2.5rem; font-size: 15px; line-height: 1.625;">
+                    <h1 class="mt-0 text-2xl font-bold tracking-tight dark:text-white"
+                        style="margin-top: 0px; font-size: 1.5rem; line-height: 2rem; font-weight: 700; letter-spacing: -0.025em;">
+                        Welcome Aboard, {{name}}.</h1>
+
+                    <p class="my-4" style="margin-top: 1rem; margin-bottom: 1rem;">Thank you for joining Prativeda. You
+                        have successfully created your account and
+                        taken the first step towards a data-driven career strategy.</p>
+
                     <!-- AI Personalized Message -->
-                    <div class="ai-message">
+                    <div class="italic text-[#444444] bg-[#f9f9f9] border-l-4 border-black p-4 my-6 leading-relaxed whitespace-pre-wrap dark:bg-[#1a1a1a] dark:text-[#cccccc] dark:border-white"
+                        style="margin-top: 1.5rem; margin-bottom: 1.5rem; white-space: pre-wrap; border-left-width: 4px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(249 249 249 / var(--tw-bg-opacity, 1)); padding: 1rem; font-style: italic; line-height: 1.625; --tw-text-opacity: 1; color: rgb(68 68 68 / var(--tw-text-opacity, 1));">
                         {{ai_message}}
                     </div>
-                    
-                    <p>Our platform is designed to bridge the gap between your skills and industry requirements. Your account grants you immediate access to our core suite of tools:</p>
-                    
-                    <ul style="padding-left: 20px; margin-bottom: 30px;">
-                        <li style="margin-bottom: 10px;"><strong>ATS Resume Builder:</strong> Create resumes that parse perfectly.</li>
-                        <li style="margin-bottom: 10px;"><strong>AI Interview Prep:</strong> Practice with questions tailored to your profile.</li>
+
+                    <p class="mb-4" style="margin-bottom: 1rem;">Our platform is designed to bridge the gap between your
+                        skills and industry
+                        requirements. Your account grants you immediate access to our core suite of tools:</p>
+
+                    <ul class="pl-5 mb-8 list-disc"
+                        style="margin-bottom: 2rem; list-style-type: disc; padding-left: 1.25rem;">
+                        <li class="mb-2" style="margin-bottom: 0.5rem;"><strong>ATS Resume Builder:</strong> Create
+                            resumes that parse perfectly.</li>
+                        <li class="mb-2" style="margin-bottom: 0.5rem;"><strong>AI Interview Prep:</strong> Practice
+                            with questions tailored to your
+                            profile.</li>
                         <li><strong>Portfolio Generator:</strong> Deploy a professional showcase in minutes.</li>
                     </ul>
 
-                    <div style="padding: 20px 0;">
-                        <a href="{{dashboard_url}}" class="button">Access Your Dashboard</a>
+                    <div class="py-5" style="padding-top: 1.25rem; padding-bottom: 1.25rem;">
+                        <a href="{{dashboard_url}}"
+                            class="bg-black text-white no-underline py-3.5 px-7 font-bold inline-block text-sm tracking-wide uppercase border-2 border-black dark:bg-white dark:text-black dark:border-white hover:opacity-90 transition-opacity"
+                            style="display: inline-block; border-width: 2px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1)); padding-left: 1.75rem; padding-right: 1.75rem; padding-top: 0.875rem; padding-bottom: 0.875rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.025em; --tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1)); text-decoration-line: none; transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;">Access
+                            Your Dashboard</a>
                     </div>
                 </td>
             </tr>
-            
+
             <!-- Footer -->
             <tr>
-                <td class="footer">
-                    <p>&copy; {{current_year}} Prativeda. Operated by CodeTapasya.</p>
-                    <p>Hyderabad, India</p>
-                    <p><a href="{{unsubscribe_url}}">Manage Preferences</a> &nbsp;|&nbsp; <a href="{{privacy_url}}">Privacy Policy</a> &nbsp;|&nbsp; <a href="{{help_url}}">Support</a></p>
+                <td class="p-10 bg-[#fafafa] text-xs text-[#666666] text-center border-t border-[#eeeeee] dark:bg-[#111111] dark:border-[#333333] dark:text-[#999999]"
+                    style="border-top-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1)); padding: 2.5rem; text-align: center; font-size: 0.75rem; line-height: 1rem; --tw-text-opacity: 1; color: rgb(102 102 102 / var(--tw-text-opacity, 1));"
+                    bgcolor="rgb(250 250 250 / var(--tw-bg-opacity, 1))" align="center">
+                    <p class="mb-1" style="margin-bottom: 0.25rem;">&amp;copy; {{current_year}} Prativeda. Operated by
+                        CodeTapasya.</p>
+                    <p class="mb-2" style="margin-bottom: 0.5rem;">Hyderabad, India</p>
+                    <p><a href="{{unsubscribe_url}}" class="text-black underline dark:text-white"
+                            style="--tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Manage
+                            Preferences</a>
+                        &amp;nbsp;|&amp;nbsp; <a href="{{privacy_url}}" class="text-black underline dark:text-white"
+                            style="--tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Privacy
+                            Policy</a> &amp;nbsp;|&amp;nbsp; <a href="{{help_url}}"
+                            class="text-black underline dark:text-white"
+                            style="--tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Support</a>
+                    </p>
                 </td>
             </tr>
         </table>
     </center>
 </body>
+
 </html>

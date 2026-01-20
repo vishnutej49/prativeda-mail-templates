@@ -1,73 +1,135 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>Security Alert</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        
-        :root { color-scheme: light dark; }
-        body { margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; }
-        
-        /* Light Mode */
-        body { background-color: #f8f8f8; color: #000000; }
-        .main { max-width: 500px; margin: 40px auto; background: #ffffff; border: 2px solid #000000; }
-        .banner { background: #000000; color: #ffffff; padding: 15px; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
-        .content { padding: 30px; }
-        .warning-text { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
-        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-        .data-table td { padding: 10px 0; border-bottom: 1px solid #eeeeee; }
-        .data-table td:first-child { font-weight: 700; width: 40%; color: #555; }
-        .btn { display: block; width: 100%; text-align: center; border: 2px solid #000000; padding: 15px 0; text-decoration: none; color: #000000; font-weight: 700; text-transform: uppercase; margin-top: 20px; }
-        .btn:hover { background-color: #000000; color: #ffffff; }
+  <meta charset="utf-8">
+  </meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
+  <meta name="color-scheme" content="light dark">
+  </meta>
+  <title>Security Alert</title>
 
-        /* Dark Mode */
-        @media (prefers-color-scheme: dark) {
-            body { background-color: #000000 !important; color: #ffffff !important; }
-            .main { background: #111111 !important; border-color: #ffffff !important; }
-            .banner { background: #ffffff !important; color: #000000 !important; }
-            .data-table td { border-bottom-color: #333333 !important; }
-            .data-table td:first-child { color: #aaaaaa !important; }
-            .btn { border-color: #ffffff !important; color: #ffffff !important; }
-            .btn:hover { background-color: #ffffff !important; color: #000000 !important; }
-        }
-    </style>
+
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+      }
+
+      .dark\:border-\[\#333333\] {
+        border-color: #333333 !important;
+      }
+
+      .dark\:border-white {
+        border-color: #ffffff !important;
+      }
+
+      .dark\:bg-\[\#111111\] {
+        background-color: #111111 !important;
+      }
+
+      .dark\:bg-black {
+        background-color: #000000 !important;
+      }
+
+      .dark\:bg-white {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+
+      .dark\:text-\[\#aaaaaa\] {
+        color: #aaaaaa !important;
+      }
+
+      .dark\:text-black {
+        color: #000000 !important;
+      }
+
+      .dark\:text-white {
+        color: #ffffff !important;
+      }
+
+      .dark\:hover\:bg-white:hover {
+        background-color: #ffffff !important;
+      }
+
+      .dark\:hover\:text-black:hover {
+        color: #000000 !important;
+      }
+    }
+  </style>
 </head>
-<body>
-    <div class="main">
-        <div class="banner">
-            Security Alert
-        </div>
-        <div class="content">
-            <div class="warning-text">New Login Detected</div>
-            <p>We noticed a new sign-in to your Prativeda account. If this was you, you can ignore this email.</p>
-            
-            <table class="data-table">
-                <tr>
-                    <td>Device</td>
-                    <td>{{device_name}}</td>
-                </tr>
-                <tr>
-                    <td>Location</td>
-                    <td>{{location}}</td>
-                </tr>
-                <tr>
-                    <td>IP Address</td>
-                    <td>{{ip_address}}</td>
-                </tr>
-                <tr>
-                    <td>Time</td>
-                    <td>{{timestamp}}</td>
-                </tr>
-            </table>
-            
-            <p style="margin-top: 30px; font-size: 14px;">Not you? Secure your account immediately.</p>
-            
-            <a href="{{secure_account_url}}" class="btn">Secure Account</a>
-        </div>
-    </div>
-</body>
-</html>
 
+<body class="m-0 p-0 font-sans antialiased bg-[#f8f8f8] text-black dark:bg-black dark:text-white"
+  style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(248 248 248 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+  <div class="max-w-[500px] mx-auto my-10 bg-white border-2 border-black dark:bg-[#111111] dark:border-white"
+    style="margin-left: auto; margin-right: auto; margin-top: 2.5rem; margin-bottom: 2.5rem; max-width: 500px; border-width: 2px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));">
+    <div class="bg-black text-white p-4 text-center font-bold uppercase tracking-widest dark:bg-white dark:text-black"
+      style="--tw-bg-opacity: 1; background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1)); padding: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; --tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1));">
+      Security Alert
+    </div>
+    <div class="p-8" style="padding: 2rem;">
+      <div class="text-lg font-bold mb-5"
+        style="margin-bottom: 1.25rem; font-size: 1.125rem; line-height: 1.75rem; font-weight: 700;">New Login Detected
+      </div>
+      <p class="mb-4" style="margin-bottom: 1rem;">We noticed a new sign-in to your Prativeda account. If this was you,
+        you can ignore this
+        email.</p>
+
+      <table class="w-full border-collapse my-5 text-sm"
+        style="margin-top: 1.25rem; margin-bottom: 1.25rem; width: 100%; border-collapse: collapse; font-size: 0.875rem; line-height: 1.25rem;"
+        width="100%">
+        <tr>
+          <td
+            class="py-2.5 border-b border-[#eeeeee] font-bold w-[40%] text-[#555] dark:border-[#333333] dark:text-[#aaaaaa]"
+            style="width: 40%; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem; font-weight: 700; --tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1));"
+            width="40%">
+            Device</td>
+          <td class="py-2.5 border-b border-[#eeeeee] dark:border-[#333333]"
+            style="border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem;">
+            {{device_name}}</td>
+        </tr>
+        <tr>
+          <td
+            class="py-2.5 border-b border-[#eeeeee] font-bold w-[40%] text-[#555] dark:border-[#333333] dark:text-[#aaaaaa]"
+            style="width: 40%; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem; font-weight: 700; --tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1));"
+            width="40%">
+            Location</td>
+          <td class="py-2.5 border-b border-[#eeeeee] dark:border-[#333333]"
+            style="border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem;">
+            {{location}}</td>
+        </tr>
+        <tr>
+          <td
+            class="py-2.5 border-b border-[#eeeeee] font-bold w-[40%] text-[#555] dark:border-[#333333] dark:text-[#aaaaaa]"
+            style="width: 40%; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem; font-weight: 700; --tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1));"
+            width="40%">
+            IP Address</td>
+          <td class="py-2.5 border-b border-[#eeeeee] dark:border-[#333333]"
+            style="border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 0.625rem; padding-bottom: 0.625rem;">
+            {{ip_address}}</td>
+        </tr>
+        <tr>
+          <td class="py-2.5 mt-2 font-bold w-[40%] text-[#555] dark:text-[#aaaaaa]"
+            style="margin-top: 0.5rem; width: 40%; padding-top: 0.625rem; padding-bottom: 0.625rem; font-weight: 700; --tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1));"
+            width="40%">Time</td>
+          <td class="py-2.5 mt-2" style="margin-top: 0.5rem; padding-top: 0.625rem; padding-bottom: 0.625rem;">
+            {{timestamp}}</td>
+        </tr>
+      </table>
+
+      <p class="mt-8 text-sm" style="margin-top: 2rem; font-size: 0.875rem; line-height: 1.25rem;">Not you? Secure your
+        account immediately.</p>
+
+      <a href="{{secure_account_url}}"
+        class="block w-full text-center border-2 border-black py-4 no-underline text-black font-bold uppercase mt-5 hover:bg-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+        style="margin-top: 1.25rem; display: block; width: 100%; border-width: 2px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); padding-top: 1rem; padding-bottom: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: none; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;">Secure
+        Account</a>
+    </div>
+  </div>
+</body>
+
+</html>
