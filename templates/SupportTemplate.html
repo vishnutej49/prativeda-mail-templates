@@ -1,96 +1,93 @@
-<!DOCTYPE>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
     <meta charset="utf-8">
-    </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </meta>
-    <meta name="color-scheme" content="light dark">
-    </meta>
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light only">
     <title>Support Ticket Update</title>
-
-
-
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
     <style>
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000000 !important;
-                color: #eeeeee !important;
-            }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-            .dark\:border-\[\#333333\] {
-                border-color: #333333 !important;
-            }
+        :root {
+            color-scheme: light only;
+        }
 
-            .dark\:border-white {
-                border-color: #ffffff !important;
-            }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Helvetica, Arial, sans-serif;
+            background-color: #f9f9f9 !important;
+        }
 
-            .dark\:bg-\[\#111111\] {
-                background-color: #111111 !important;
-            }
+        u+.body {
+            background-color: #f9f9f9 !important;
+        }
 
-            .dark\:bg-\[\#333333\] {
-                background-color: #333333 !important;
-            }
-
-            .dark\:bg-black {
-                background-color: #000000 !important;
-            }
-
-            .dark\:text-\[\#aaaaaa\] {
-                color: #aaaaaa !important;
-            }
-
-            .dark\:text-\[\#eeeeee\] {
-                color: #eeeeee !important;
-            }
-
-            .dark\:text-white {
-                color: #ffffff !important;
-            }
-
-            .dark\:shadow-none {
-                box-shadow: none !important;
-            }
+        .response-body {
+            white-space: pre-wrap;
         }
     </style>
 </head>
 
-<body class="m-0 p-0 font-sans antialiased bg-[#f9f9f9] text-[#111111] dark:bg-black dark:text-[#eeeeee]"
-    style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(249 249 249 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(17 17 17 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
-    <div class="max-w-[600px] mx-auto bg-white border-l-4 border-black p-10 my-10 shadow-sm dark:bg-[#111111] dark:border-white dark:shadow-none"
-        style="margin-left: auto; margin-right: auto; margin-top: 2.5rem; margin-bottom: 2.5rem; max-width: 600px; border-left-width: 4px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)); padding: 2.5rem; --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color); box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);">
-        <div class="text-xs uppercase text-[#888888] dark:text-[#aaaaaa] tracking-widest mb-2 font-semibold"
-            style="margin-bottom: 0.5rem; font-size: 0.75rem; line-height: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; --tw-text-opacity: 1; color: rgb(136 136 136 / var(--tw-text-opacity, 1));">
-            Ticket #{{ticket_id}} &amp;bull; Status: {{ticket_status}}
-        </div>
-        <h2 class="text-xl font-bold mb-5 pb-5 border-b border-[#eeeeee] dark:border-[#333333]"
-            style="margin-bottom: 1.25rem; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-bottom: 1.25rem; font-size: 1.25rem; line-height: 1.75rem; font-weight: 700;">
-            {{ticket_subject}}</h2>
+<body class="body"
+    style="margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; background-color: #f9f9f9;">
+    <center style="width: 100%; background-color: #f9f9f9; padding: 40px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600"
+            style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-left: 4px solid #000000; padding: 40px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+            <!-- Ticket Meta -->
+            <tr>
+                <td
+                    style="font-size: 12px; text-transform: uppercase; color: #888888; letter-spacing: 2px; margin-bottom: 8px; font-weight: 600;">
+                    Ticket #{{ticket_id}} &bull; Status: {{ticket_status}}
+                </td>
+            </tr>
 
-        <div class="leading-relaxed text-[15px]" style="font-size: 15px; line-height: 1.625;">
-            <p class="mb-4" style="margin-bottom: 1rem;">Dear {{name}},</p>
+            <!-- Subject -->
+            <tr>
+                <td
+                    style="padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #eeeeee; font-size: 20px; font-weight: 700; color: #000000;">
+                    {{ticket_subject}}
+                </td>
+            </tr>
 
-            <p class="mb-4 whitespace-pre-wrap" style="margin-bottom: 1rem; white-space: pre-wrap;">
-                {{agent_response_body}}</p>
+            <!-- Body -->
+            <tr>
+                <td style="padding-top: 20px; font-size: 15px; line-height: 1.625; color: #111111;">
+                    <p style="margin: 0 0 16px 0;">Dear {{name}},</p>
 
-            <br></br>
-            <p class="mb-0" style="margin-bottom: 0px;">Regards,</p>
-            <p class="font-bold mt-1" style="margin-top: 0.25rem; font-weight: 700;">{{agent_name}}</p>
-            <p class="text-[13px] text-[#666666]"
-                style="font-size: 13px; --tw-text-opacity: 1; color: rgb(102 102 102 / var(--tw-text-opacity, 1));">
-                Prativeda Customer Success</p>
-        </div>
+                    <p class="response-body" style="margin: 0 0 16px 0; white-space: pre-wrap;">{{agent_response_body}}
+                    </p>
 
-        <div class="font-mono bg-[#eeeeee] dark:bg-[#333333] px-2 py-1 text-xs inline-block mt-8 dark:text-white"
-            style="margin-top: 2rem; display: inline-block; --tw-bg-opacity: 1; background-color: rgb(238 238 238 / var(--tw-bg-opacity, 1)); padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.25rem; padding-bottom: 0.25rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.75rem; line-height: 1rem;">
-            REF_ID: {{ticket_id}}</div>
-        <p class="text-xs text-[#888888] mt-5"
-            style="margin-top: 1.25rem; font-size: 0.75rem; line-height: 1rem; --tw-text-opacity: 1; color: rgb(136 136 136 / var(--tw-text-opacity, 1));">
-            To add more details, simply reply to this email.</p>
-    </div>
+                    <br>
+                    <p style="margin: 0;">Regards,</p>
+                    <p style="margin: 4px 0 0 0; font-weight: 700;">{{agent_name}}</p>
+                    <p style="margin: 0; font-size: 13px; color: #666666;">Prativeda Customer Success</p>
+                </td>
+            </tr>
+
+            <!-- Reference ID -->
+            <tr>
+                <td style="padding-top: 32px;">
+                    <span
+                        style="display: inline-block; background-color: #eeeeee; padding: 4px 8px; font-family: monospace; font-size: 12px; color: #000000;">REF_ID:
+                        {{ticket_id}}</span>
+                    <p style="margin: 20px 0 0 0; font-size: 12px; color: #888888;">To add more details, simply reply to
+                        this email.</p>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 
 </html>

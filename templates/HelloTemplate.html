@@ -1,93 +1,90 @@
-<!DOCTYPE>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
   <meta charset="utf-8">
-  </meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </meta>
-  <meta name="color-scheme" content="light dark">
-  </meta>
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light only">
   <title>Update</title>
-
-
-
+  <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
   <style>
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #000000 !important;
-        color: #eeeeee !important;
-      }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-      .dark\:border-white {
-        border-color: #ffffff !important;
-      }
+    :root {
+      color-scheme: light only;
+    }
 
-      .dark\:bg-black {
-        background-color: #000000 !important;
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Helvetica, Arial, sans-serif;
+      background-color: #ffffff !important;
+    }
 
-      .dark\:text-\[\#666666\] {
-        color: #666666 !important;
-      }
-
-      .dark\:text-\[\#888888\] {
-        color: #888888 !important;
-      }
-
-      .dark\:text-\[\#cccccc\] {
-        color: #cccccc !important;
-      }
-
-      .dark\:text-\[\#eeeeee\] {
-        color: #eeeeee !important;
-      }
-
-      .dark\:text-white {
-        color: #ffffff !important;
-      }
+    u+.body {
+      background-color: #ffffff !important;
     }
   </style>
 </head>
 
-<body class="m-0 p-0 font-sans antialiased bg-white text-black dark:bg-black dark:text-[#eeeeee]"
-  style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
-  <div class="max-w-[640px] mx-auto py-10 px-5"
-    style="margin-left: auto; margin-right: auto; max-width: 640px; padding-left: 1.25rem; padding-right: 1.25rem; padding-top: 2.5rem; padding-bottom: 2.5rem;">
-    <div class="text-center border-b border-black pb-8 mb-10 dark:border-white"
-      style="margin-bottom: 2.5rem; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); padding-bottom: 2rem; text-align: center;">
-      <span class="font-black text-2xl tracking-widest uppercase no-underline text-black dark:text-white"
-        style="font-size: 1.5rem; line-height: 2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: none;">PRATIVEDA</span>
-    </div>
+<body class="body"
+  style="margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; background-color: #ffffff;">
+  <center style="width: 100%; background-color: #ffffff; padding: 40px 0;">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640"
+      style="max-width: 640px; margin: 0 auto; padding: 0 20px;">
+      <!-- Header -->
+      <tr>
+        <td style="text-align: center; padding-bottom: 32px; margin-bottom: 40px; border-bottom: 1px solid #000000;">
+          <span
+            style="font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 4px; color: #000000; text-decoration: none;">PRATIVEDA</span>
+        </td>
+      </tr>
 
-    <div class="text-3xl font-bold mb-5 leading-tight"
-      style="margin-bottom: 1.25rem; font-size: 1.875rem; font-weight: 700; line-height: 1.25;">{{headline}}</div>
+      <!-- Headline -->
+      <tr>
+        <td
+          style="padding-top: 40px; font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: #000000;">
+          {{headline}}
+        </td>
+      </tr>
 
-    <div class="text-base leading-relaxed text-[#333333] mb-5 dark:text-[#cccccc]"
-      style="margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.625; --tw-text-opacity: 1; color: rgb(51 51 51 / var(--tw-text-opacity, 1));">
-      <p class="mb-4" style="margin-bottom: 1rem;">Hi {{name}},</p>
+      <!-- Body -->
+      <tr>
+        <td style="padding-top: 20px; font-size: 16px; line-height: 1.6; color: #333333;">
+          <p style="margin: 0 0 16px 0;">Hi {{name}},</p>
 
-      <p class="mb-4" style="margin-bottom: 1rem;">{{body_paragraph_1}}</p>
+          <p style="margin: 0 0 16px 0;">{{body_paragraph_1}}</p>
 
-      <p class="mb-4" style="margin-bottom: 1rem;">{{body_paragraph_2}}</p>
+          <p style="margin: 0 0 16px 0;">{{body_paragraph_2}}</p>
 
-      <a href="{{cta_url}}"
-        class="inline-block border-b-2 border-black pb-0.5 text-black no-underline font-bold text-base mt-2.5 dark:border-white dark:text-white hover:opacity-80 transition-opacity"
-        style="margin-top: 0.625rem; display: inline-block; border-bottom-width: 2px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); padding-bottom: 0.125rem; font-size: 1rem; line-height: 1.5rem; font-weight: 700; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: none; transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;">{{cta_text}}
-        &amp;rarr;</a>
-    </div>
+          <a href="{{cta_url}}"
+            style="display: inline-block; margin-top: 10px; padding-bottom: 2px; border-bottom: 2px solid #000000; color: #000000; font-weight: 700; font-size: 16px; text-decoration: none;">{{cta_text}}
+            &rarr;</a>
+        </td>
+      </tr>
 
-    <div class="mt-16 text-center text-[11px] text-[#888888] dark:text-[#666666]"
-      style="margin-top: 4rem; text-align: center; font-size: 11px; --tw-text-opacity: 1; color: rgb(136 136 136 / var(--tw-text-opacity, 1));">
-      <p class="mb-1" style="margin-bottom: 0.25rem;">&amp;copy; {{current_year}} Prativeda. All rights reserved.</p>
-      <p><a href="{{unsubscribe_url}}" class="text-[#555555] no-underline dark:text-[#888888]"
-          style="--tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1)); text-decoration-line: none;">Unsubscribe</a>
-        &amp;bull; <a href="{{browser_url}}" class="text-[#555555] no-underline dark:text-[#888888]"
-          style="--tw-text-opacity: 1; color: rgb(85 85 85 / var(--tw-text-opacity, 1)); text-decoration-line: none;">View
-          Online</a>
-      </p>
-    </div>
-  </div>
+      <!-- Footer -->
+      <tr>
+        <td style="padding-top: 60px; text-align: center; font-size: 11px; color: #888888;">
+          <p style="margin: 0 0 4px 0;">&copy; {{current_year}} Prativeda. All rights reserved.</p>
+          <p style="margin: 0;">
+            <a href="{{unsubscribe_url}}" style="color: #555555; text-decoration: none;">Unsubscribe</a>
+            &bull;
+            <a href="{{browser_url}}" style="color: #555555; text-decoration: none;">View Online</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </center>
 </body>
 
 </html>

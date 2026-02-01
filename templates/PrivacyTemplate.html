@@ -1,127 +1,111 @@
-<!DOCTYPE>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
     <meta charset="utf-8">
-    </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </meta>
-    <meta name="color-scheme" content="light dark">
-    </meta>
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light only">
     <title>Privacy Notification</title>
-
-
-
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
     <style>
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000000 !important;
-                color: #dddddd !important;
-            }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-            .dark\:border-\[\#333333\] {
-                border-color: #333333 !important;
-            }
+        :root {
+            color-scheme: light only;
+        }
 
-            .dark\:border-white {
-                border-color: #ffffff !important;
-            }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Helvetica, Arial, sans-serif;
+            background-color: #fcfcfc !important;
+        }
 
-            .dark\:bg-\[\#111111\] {
-                background-color: #111111 !important;
-            }
+        u+.body {
+            background-color: #fcfcfc !important;
+        }
 
-            .dark\:bg-\[\#1a1a1a\] {
-                background-color: #1a1a1a !important;
-            }
-
-            .dark\:bg-black {
-                background-color: #000000 !important;
-            }
-
-            .dark\:bg-white {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-            }
-
-            .dark\:text-\[\#888888\] {
-                color: #888888 !important;
-            }
-
-            .dark\:text-\[\#aaaaaa\] {
-                color: #aaaaaa !important;
-            }
-
-            .dark\:text-\[\#dddddd\] {
-                color: #dddddd !important;
-            }
-
-            .dark\:text-black {
-                color: #000000 !important;
-            }
-
-            .dark\:text-white {
-                color: #ffffff !important;
-            }
+        .body-text {
+            white-space: pre-wrap;
         }
     </style>
 </head>
 
-<body class="m-0 p-0 font-sans antialiased bg-[#fcfcfc] text-black dark:bg-black dark:text-[#dddddd]"
-    style="margin: 0px; --tw-bg-opacity: 1; background-color: rgb(252 252 252 / var(--tw-bg-opacity, 1)); padding: 0px; font-family: Poppins, Helvetica, Arial, sans-serif; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
-    <div class="max-w-[600px] mx-auto my-10 border-t-[5px] border-black dark:border-white p-10 bg-white dark:bg-[#111111]"
-        style="margin-left: auto; margin-right: auto; margin-top: 2.5rem; margin-bottom: 2.5rem; max-width: 600px; border-top-width: 5px; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)); padding: 2.5rem;">
-        <div class="text-sm font-bold uppercase tracking-widest mb-8 border-b border-[#eeeeee] dark:border-[#333333] pb-4 text-black dark:text-[#aaaaaa]"
-            style="margin-bottom: 2rem; border-bottom-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-bottom: 1rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1));">
-            Prativeda Privacy Office
-        </div>
+<body class="body"
+    style="margin: 0; padding: 0; font-family: 'Poppins', Helvetica, Arial, sans-serif; background-color: #fcfcfc;">
+    <center style="width: 100%; background-color: #fcfcfc; padding: 40px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600"
+            style="max-width: 600px; margin: 0 auto; border-top: 5px solid #000000; background-color: #ffffff; padding: 40px;">
+            <!-- Header -->
+            <tr>
+                <td
+                    style="padding-bottom: 16px; margin-bottom: 32px; border-bottom: 1px solid #eeeeee; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: #000000;">
+                    Prativeda Privacy Office
+                </td>
+            </tr>
 
-        <div class="text-2xl font-bold mb-5"
-            style="margin-bottom: 1.25rem; font-size: 1.5rem; line-height: 2rem; font-weight: 700;">
-            {{request_type_title}}</div>
+            <!-- Title -->
+            <tr>
+                <td style="padding-top: 32px; font-size: 24px; font-weight: 700; margin-bottom: 20px; color: #000000;">
+                    {{request_type_title}}
+                </td>
+            </tr>
 
-        <div class="text-base leading-relaxed mb-8" style="margin-bottom: 2rem; font-size: 1rem; line-height: 1.625;">
-            <p class="mb-4" style="margin-bottom: 1rem;">Dear {{name}},</p>
+            <!-- Body -->
+            <tr>
+                <td style="padding-top: 20px; font-size: 16px; line-height: 1.625; color: #000000;">
+                    <p style="margin: 0 0 16px 0;">Dear {{name}},</p>
 
-            <p class="mb-4" style="margin-bottom: 1rem;">We are contacting you regarding your request regarding
-                {{request_subject}} (Case ID:
-                {{case_id}}).</p>
+                    <p style="margin: 0 0 16px 0;">We are contacting you regarding your request regarding
+                        {{request_subject}} (Case ID: {{case_id}}).</p>
 
-            <p class="mb-4 whitespace-pre-wrap" style="margin-bottom: 1rem; white-space: pre-wrap;">{{body_text}}</p>
+                    <p class="body-text" style="margin: 0 0 16px 0; white-space: pre-wrap;">{{body_text}}</p>
 
-            <!-- Conditional: Show only for Data Export requests -->
-            {{#if is_data_export}}
-            <div class="border-2 border-dashed border-black dark:border-white p-6 my-5 text-center bg-[#fafafa] dark:bg-[#1a1a1a] text-black dark:text-white"
-                style="margin-top: 1.25rem; margin-bottom: 1.25rem; border-width: 2px; border-style: dashed; --tw-border-opacity: 1; border-color: rgb(0 0 0 / var(--tw-border-opacity, 1)); --tw-bg-opacity: 1; background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1)); padding: 1.5rem; text-align: center; --tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1));">
-                <strong>Your Data Archive is Ready</strong>
-                <br></br>
-                <span class="text-xs opacity-80" style="font-size: 0.75rem; line-height: 1rem; opacity: 0.8;">Expires in
-                    48 hours</span>
-                <br></br>
-                <a href="{{download_url}}"
-                    class="inline-block bg-black dark:bg-white text-white dark:text-black py-3 px-8 font-semibold mt-4 uppercase text-sm no-underline hover:opacity-90 transition-opacity"
-                    style="margin-top: 1rem; display: inline-block; --tw-bg-opacity: 1; background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1)); padding-left: 2rem; padding-right: 2rem; padding-top: 0.75rem; padding-bottom: 0.75rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; text-transform: uppercase; --tw-text-opacity: 1; color: rgb(255 255 255 / var(--tw-text-opacity, 1)); text-decoration-line: none; transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;">Download
-                    Archive</a>
-            </div>
-            {{/if}}
+                    <!-- Conditional: Show only for Data Export requests -->
+                    {{#if is_data_export}}
+                    <div
+                        style="margin: 20px 0; padding: 24px; border: 2px dashed #000000; text-align: center; background-color: #fafafa;">
+                        <strong style="color: #000000;">Your Data Archive is Ready</strong>
+                        <br>
+                        <span style="font-size: 12px; color: #666666;">Expires in 48 hours</span>
+                        <br><br>
+                        <a href="{{download_url}}"
+                            style="display: inline-block; padding: 12px 32px; background-color: #000000; color: #ffffff; font-size: 14px; font-weight: 600; text-transform: uppercase; text-decoration: none;">Download
+                            Archive</a>
+                    </div>
+                    {{/if}}
 
-            <p>If you have further questions about how we handle your data, please review our updated policies or
-                contact our Data Protection Officer.</p>
-        </div>
+                    <p style="margin: 0;">If you have further questions about how we handle your data, please review our
+                        updated policies or contact our Data Protection Officer.</p>
+                </td>
+            </tr>
 
-        <div class="text-[11px] text-[#777777] dark:text-[#888888] border-t border-[#eeeeee] dark:border-[#333333] pt-5 mt-10"
-            style="margin-top: 2.5rem; border-top-width: 1px; --tw-border-opacity: 1; border-color: rgb(238 238 238 / var(--tw-border-opacity, 1)); padding-top: 1.25rem; font-size: 11px; --tw-text-opacity: 1; color: rgb(119 119 119 / var(--tw-text-opacity, 1));">
-            <p class="mb-1" style="margin-bottom: 0.25rem;">CodeTapasya Data Compliance • Hyderabad, India</p>
-            <p class="mb-2" style="margin-bottom: 0.5rem;"><a href="{{privacy_policy_url}}"
-                    class="text-black dark:text-white underline"
-                    style="--tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Privacy
-                    Policy</a> &amp;bull; <a href="{{help_url}}" class="text-black dark:text-white underline"
-                    style="--tw-text-opacity: 1; color: rgb(0 0 0 / var(--tw-text-opacity, 1)); text-decoration-line: underline;">Contact
-                    DPO</a></p>
-            <p class="mt-2 opacity-60" style="margin-top: 0.5rem; opacity: 0.6;">Confidential: This email is intended
-                solely for the addressee.</p>
-        </div>
-    </div>
+            <!-- Footer -->
+            <tr>
+                <td
+                    style="padding-top: 40px; margin-top: 40px; border-top: 1px solid #eeeeee; font-size: 11px; color: #777777;">
+                    <p style="margin: 0 0 4px 0;">CodeTapasya Data Compliance • Hyderabad, India</p>
+                    <p style="margin: 0 0 8px 0;">
+                        <a href="{{privacy_policy_url}}" style="color: #000000; text-decoration: underline;">Privacy
+                            Policy</a>
+                        &bull;
+                        <a href="{{help_url}}" style="color: #000000; text-decoration: underline;">Contact DPO</a>
+                    </p>
+                    <p style="margin: 8px 0 0 0; opacity: 0.6;">Confidential: This email is intended solely for the
+                        addressee.</p>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 
 </html>
